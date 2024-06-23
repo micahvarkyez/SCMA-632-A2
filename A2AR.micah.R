@@ -32,8 +32,8 @@ imput_with_mean <- function(data,column) {
 }
 sum(is.na(data$foodtotal_q))
 cleaned_data <- na.omit(data)
-odisha_data <- cleaned_data %>%
-  filter(state_1 == "ORI")
-nrow(odisha_data) 
+westbengal_data <- cleaned_data %>%
+  filter(state_1 == "WB")
+nrow(westbengal_data) 
 model <- lm(foodtotal_q ~ Meals_At_Home + Possess_ration_card + Age + MPCE_URP + MPCE_MRP, data = data)
 summary(model)
